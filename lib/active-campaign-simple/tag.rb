@@ -19,7 +19,7 @@ module ActiveCampaign
     end
 
     def self.find(_tag)
-      refresh_tag_list if @@tag_list.nil?
+      refresh_tag_list if !defined?(@@tag_list) || @@tag_list.nil?
       @@tag_list[_tag]
     end
   end
