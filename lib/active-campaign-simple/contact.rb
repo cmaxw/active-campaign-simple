@@ -14,7 +14,7 @@ module ActiveCampaign
 
     def add_tag(tag)
       tag_to_add = Tag.find(tag)
-      ActiveCampaign.post('/contactTags', { contactTag: { contact: id, tag: tag_to_add.id } })
+      ActiveCampaign.post('/contactTags', payload: { contactTag: { contact: id, tag: tag_to_add.id } })
     end
 
     def self.create_or_find_by_email(email)
