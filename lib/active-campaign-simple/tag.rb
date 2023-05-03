@@ -8,6 +8,10 @@ module ActiveCampaign
       @attributes = attributes
     end
 
+    def id
+      attributes['id']
+    end
+
     def self.refresh_tag_list
       @@tag_list = ActiveCampaign.get('/tags')['tags'].each_with_object({}) do |tag, list|
         list[tag['tag']] = new(tag)
