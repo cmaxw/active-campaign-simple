@@ -18,7 +18,7 @@ module ActiveCampaign
     end
 
     def self.find_or_create_by_email(email)
-      search(email).first || new(create({ email: email }))
+      search(email).first || create({ email: email })
     end
 
     def self.create(payload)
