@@ -3,6 +3,7 @@ require 'active-campaign-simple/config'
 require 'active-campaign-simple/logger'
 
 require 'active-campaign-simple/contact'
+require 'active-campaign-simple/tag'
 
 module ActiveCampaign
   extend Config
