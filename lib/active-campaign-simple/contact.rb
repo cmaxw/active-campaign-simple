@@ -15,7 +15,7 @@ module ActiveCampaign
     end
 
     def self.search(term)
-      ActiveCampaign.get('/contacts', query: {search: term})
+      ActiveCampaign.get('/contacts', query: { search: term })['contacts']
     end
   end
 end
